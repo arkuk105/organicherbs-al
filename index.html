@@ -49,14 +49,14 @@
         <!-- Videos Section -->
         <div class="video-container">
             <div class="video">
-                <video controls>
+                <video id="video1" muted>
                     <source src="olivetree.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p>Olivetree</p>
             </div>
             <div class="video">
-                <video controls>
+                <video id="video2" muted>
                     <source src="oliveoil.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -69,5 +69,23 @@
             <img src="KURJAN.jpg" alt="Foto e Kurjanit 1967">
         </div>
     </div>
+
+    <script>
+        const video1 = document.getElementById('video1');
+        const video2 = document.getElementById('video2');
+
+        // Play the first video initially
+        video1.play();
+
+        // When video1 ends, play video2
+        video1.addEventListener('ended', () => {
+            video2.play();
+        });
+
+        // When video2 ends, loop back to video1
+        video2.addEventListener('ended', () => {
+            video1.play();
+        });
+    </script>
 </body>
 </html>
