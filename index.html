@@ -24,6 +24,19 @@
             height: auto;
             margin-top: 20px;
         }
+        .video-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .video {
+            flex: 1;
+        }
+        video {
+            width: 100%;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -32,6 +45,26 @@
         <p>Kurjani, një fshat i lashtë në zemër të Fierit, mbart një histori të pasur të traditës bujqësore dhe mikpritjes shqiptare. Ky vend është i njohur për ullinjtë e tij të hershëm dhe prodhimin e vajit të cilësisë së lartë që nga koha e paraardhësve tanë.</p>
         <p>Vaji ynë i ullirit prodhohet me kujdes nga ullinjtë më të mirë të Kurjanit. Duke përdorur teknika te ngjashme me ato tradicionale të presimit në të ftohtë, arrijmë të ruajmë të gjitha vlerat ushqyese dhe aromat e freskëta të ullirit. I pasur me antioksidantë dhe pa aditivë, ky vaj është zgjedhja perfekte për shëndetin dhe kuzhinën tuaj.</p>
         <h2>Kur tradita dhe cilësia bëhen një!</h2>
+        
+        <!-- Videos Section -->
+        <div class="video-container">
+            <div class="video">
+                <video controls>
+                    <source src="olivetree.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Olivetree</p>
+            </div>
+            <div class="video">
+                <video controls>
+                    <source src="oliveoil.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Oliveoil</p>
+            </div>
+        </div>
+        
+        <!-- Image Section -->
         <div class="country-sketch">
             <img src="KURJAN.jpg" alt="Foto e Kurjanit 1967">
         </div>
