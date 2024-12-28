@@ -49,16 +49,18 @@
         <!-- Videos Section -->
         <div class="video-container">
             <div class="video">
-                <video id="video1" autoplay muted playsinline>
+                <video id="video1" autoplay muted loop playsinline>
                     <source src="olivetree.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <p>Olivetree</p>
             </div>
             <div class="video">
-                <video id="video2" muted playsinline>
+                <video id="video2" autoplay muted loop playsinline>
                     <source src="oliveoil.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <p>Oliveoil</p>
             </div>
         </div>
         
@@ -73,21 +75,13 @@
         const video1 = document.getElementById('video1');
         const video2 = document.getElementById('video2');
 
-        // Initially hide the second video
-        video2.style.display = 'none';
-
-        // Play video2 when video1 ends
+        // Ensure both videos are continuously playing
         video1.addEventListener('ended', () => {
-            video1.style.display = 'none';
-            video2.style.display = 'block';
-            video2.play();
+            video1.play(); // Restart video1 when it ends
         });
 
-        // Play video1 when video2 ends
         video2.addEventListener('ended', () => {
-            video2.style.display = 'none';
-            video1.style.display = 'block';
-            video1.play();
+            video2.play(); // Restart video2 when it ends
         });
     </script>
 </body>
