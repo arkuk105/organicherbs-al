@@ -19,11 +19,6 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .country-sketch img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-        }
         .video-container {
             display: flex;
             justify-content: space-between;
@@ -42,31 +37,22 @@
 <body>
     <div class="content">
         <h1>Vaji i Ullirit nga Fshati Kurjan, Fier</h1>
-        <p>Kurjani, një fshat i lashtë në zemër të Fierit, mbart një histori të pasur të traditës bujqësore dhe mikpritjes shqiptare. Ky vend është i njohur për ullinjtë e tij të hershëm dhe prodhimin e vajit të cilësisë së lartë që nga koha e paraardhësve tanë.</p>
-        <p>Vaji ynë i ullirit prodhohet me kujdes nga ullinjtë më të mirë të Kurjanit. Duke përdorur teknika te ngjashme me ato tradicionale të presimit në të ftohtë, arrijmë të ruajmë të gjitha vlerat ushqyese dhe aromat e freskëta të ullirit. I pasur me antioksidantë dhe pa aditivë, ky vaj është zgjedhja perfekte për shëndetin dhe kuzhinën tuaj.</p>
-        <h2>Kur tradita dhe cilësia bëhen një!</h2>
-        
+        <p>Kurjani, një fshat i lashtë në zemër të Fierit...</p>
+
         <!-- Videos Section -->
         <div class="video-container">
             <div class="video">
-                <video id="video1" muted>
+                <video id="video1" autoplay muted loop playsinline>
                     <source src="olivetree.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p>Olivetree</p>
             </div>
             <div class="video">
-                <video id="video2" muted>
+                <video id="video2" muted loop playsinline>
                     <source src="oliveoil.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p>Oliveoil</p>
             </div>
-        </div>
-        
-        <!-- Image Section -->
-        <div class="country-sketch">
-            <img src="KURJAN.jpg" alt="Foto e Kurjanit 1967">
         </div>
     </div>
 
@@ -74,16 +60,20 @@
         const video1 = document.getElementById('video1');
         const video2 = document.getElementById('video2');
 
-        // Play the first video initially
-        video1.play();
+        // Hide the second video initially
+        video2.style.display = 'none';
 
-        // When video1 ends, play video2
+        // When video1 ends, switch to video2
         video1.addEventListener('ended', () => {
+            video1.style.display = 'none';
+            video2.style.display = 'block';
             video2.play();
         });
 
-        // When video2 ends, loop back to video1
+        // When video2 ends, switch back to video1
         video2.addEventListener('ended', () => {
+            video2.style.display = 'none';
+            video1.style.display = 'block';
             video1.play();
         });
     </script>
