@@ -37,6 +37,14 @@
             width: 100%;
             border-radius: 10px;
         }
+        #faq-content {
+            display: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+        #faq-content h3 {
+            color: #2c3e50;
+        }
     </style>
 </head>
 <body>
@@ -69,6 +77,39 @@
         <div class="country-sketch">
             <img src="KURJAN.jpg" alt="Foto e Kurjanit 1967">
         </div>
+
+        <!-- FAQ Section -->
+        <h2>FAQ</h2>
+        <p>
+            Për të lexuar më shumë rreth vajit të ullirit, klikoni këtu: 
+            <a href="#faq-content" onclick="toggleFAQ()">Lexo më shumë</a>
+        </p>
+
+        <div id="faq-content">
+            <h3>1. Origjina dhe përdorimet e hershme të vajit të ullirit</h3>
+            <p>Vaji i ullirit ka një histori që daton mijëra vjet më parë dhe konsiderohet një nga produktet më të hershme të bujqësisë së organizuar...</p>
+
+            <h3>2. Cilësitë dhe vetitë e vajit të ullirit</h3>
+            <p>Vaji i ullirit është një produkt unik me përbërje të pasur në acide yndyrore të pangopura dhe antioksidantë...</p>
+
+            <h3>3. Si të dallojmë vajin e mirë në shtëpi</h3>
+            <p>Për të vlerësuar cilësinë e vajit të ullirit në kushtet e shtëpisë, mund të ndiqen disa metoda praktike...</p>
+
+            <h3>4. Parametrat dhe klasifikimi i vajit të ullirit</h3>
+            <p>Bashkimi Evropian dhe organizmat e tjerë ndërkombëtarë kanë vendosur parametra rigoroze për klasifikimin e vajit të ullirit...</p>
+
+            <h3>5. Mitet në lidhje me vajin e ullirit</h3>
+            <p>Ekzistojnë shumë mite në lidhje me vajin e ullirit, siç janë ato për temperaturat e gatimit, ngjyrën si tregues i cilësisë...</p>
+
+            <h3>6. Për çfarë nuk duhet të përdoret vaji i ullirit?</h3>
+            <p>Ka disa raste kur përdorimi i vajit të ullirit nuk është i rekomanduar...</p>
+
+            <h3>7. Sasia e rekomanduar e vajit të ullirit për person në 1 vit</h3>
+            <p>Sasia e rekomanduar e vajit të ullirit për një person është rreth 20-25 litra në vit...</p>
+
+            <h3>8. Këndvështrimi fetar mbi vajin e ullirit</h3>
+            <p>Vaji i ullirit ka rëndësi të madhe në Islam dhe Katolicizëm...</p>
+        </div>
     </div>
 
     <script>
@@ -83,6 +124,15 @@
         video2.addEventListener('ended', () => {
             video2.play(); // Restart video2 when it ends
         });
+
+        function toggleFAQ() {
+            const faqContent = document.getElementById('faq-content');
+            if (faqContent.style.display === 'none' || faqContent.style.display === '') {
+                faqContent.style.display = 'block';
+            } else {
+                faqContent.style.display = 'none';
+            }
+        }
     </script>
 </body>
-</html>
+    </html>
